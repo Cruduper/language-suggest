@@ -62,10 +62,11 @@ $(document).ready(function() {
   $("form#userInfo").submit(function() {
 
     event.preventDefault();
-
+    
     if ( document.getElementById("question1").style.display != "none" )
     { 
       $("#question1").hide();
+      $("#instructions").hide();
       name = $("input#name").val();
       
       if (name === "Jabroni") {
@@ -95,11 +96,23 @@ $(document).ready(function() {
     } 
     else {
         $("#question5").hide();
-        $("#userInfo").hide();
+        $("#add-info").hide();
         favSubject = $("input#favSubject").val();
         yourLanguage = findLanguage(name, age, favFood, organized, favSubject)
         $("#langToLearn").text(yourLanguage);
         $("#result").show()
+        $("#start-over").show();
     }
   });
+
+  $(document.getElementById('start-over')).click(function()  {
+
+  event.preventDefault();
+  $("#result").hide();
+  $("#start-over").hide();
+  $("#instructions").show();
+  $("#question1").show();
+  $("#add-info").show();
+  }); 
+
 });
