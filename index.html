@@ -9,5 +9,59 @@
   <title></title>
 </head>
 <body>
+  <div class="container">
+    <h1>Language Suggester</h1>
+    <form id="userInfo">
+
+      <div class="form-group">
+        <label for="name">Type in your name very quickly:</label>
+        <input id="name" class="form-control" type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Type in your age:</label>
+        <input id="age" class="form-control" type="number">
+      </div>
+
+      <div class="form-group">
+        <label for="personality">2nd number:</label>
+        <select id="personality">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="organized">2nd number:</label>
+        <select id="organized">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
+
+      <div class="radio">
+        <input type="radio" name="favSubject" value="1" checked>
+          <span class="radio-text">text here</span>
+        <input type="radio" name="favSubject" value="2">
+          <span class="radio-text">text here</span>
+        <input type="radio" name="favSubject" value="3">
+          <span class="radio-text">text here</span>
+        <input type="radio" name="favSubject" value="4">
+          <span class="radio-text">text here</span>
+      </div>
+
+      <button type="submit" class="btn btn-dark">Calculate</button>
+    </form>
+
+    <div id="output">
+      <br>
+      <h2>
+
+      </h2>
+
+    </div>
+  </div>
   
 </body>
