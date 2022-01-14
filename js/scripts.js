@@ -11,11 +11,15 @@ $(document).ready(function() {
 
     if ( document.getElementById("question1").style.display != "none" )
     { 
-      console.log("im here");
-      //document.getElementById("question1").style.display = "none";
       $("#question1").hide();
       name = $("input#name").val()
-      //document.getElementById("question2").style.display = "block";
+      
+      if (name === "Jabroni") {
+        $("#alt-text").show();
+        $("#alt-text").fadeOut(3000);
+        $("#alt-text").hide(5000);
+      }
+
       $("#question2").show();
     } 
     else if ( document.getElementById("question2").style.display != "none" ) {
@@ -29,7 +33,7 @@ $(document).ready(function() {
 
         console.log("im here 3");
         document.getElementById("question3").style.display = "none";
-        personality = $("input#personality").val();
+        personality = $("input#fav-food").val();
         document.getElementById("question4").style.display = "block";
     } 
     else if ( document.getElementById("question4").style.display != "none" ) {

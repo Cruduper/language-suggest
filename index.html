@@ -15,7 +15,7 @@
 
       <div class="form-group" id="question1">
         <label for="name">Type in your name very quickly:</label>
-        <input id="name" class="form-control" type="text">
+        <input id="name" class="form-control" type="text" value="Jabroni">
       </div>
 
       <div class="form-group" id="question2">
@@ -24,20 +24,20 @@
       </div>
 
       <div class="form-group" id="question3">
-        <label for="personality">Nachos, tacos, or burritos?</label>
-        <select id="personality">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+        <label for="fav-food">Nachos, tacos, or burritos?</label>
+        <select id="fav-food">
+          <option value="nachos">all</option>
+          <option value="tacos">absolutely all of them</option>
+          <option value="burritos">so_good.gif</option>
         </select>
       </div>
 
       <div class="form-group" id="question4">
         <label for="organized">How organized are you?</label>
         <select id="organized">
-          <option value="VERY ORGANIZED. YOU ABSOLUTELY WOULD NOT BELIEVE HOW ORGANIZED I AM"></option>
-          <option value="I keep up well enough"></option>
-          <option value="I don't know that word, oragniezd, is that French?"></option>
+          <option value="very-organized">VERY ORGANIZED. YOU ABSOLUTELY WOULD NOT BELIEVE HOW ORGANIZED I AM</option>
+          <option value="organized">I keep up well enough</option>
+          <option value="unorganized">I don't know that word, oragniezd...is that French?</option>
         </select>
       </div>
 
@@ -48,19 +48,24 @@
           <span class="radio-text">Math</span>
         <input type="radio" name="favSubject" value="physics">
           <span class="radio-text">Physics</span>
-        <input type="radio" name="favSubject" value="physEd">
+        <input type="radio" name="favSubject" value="phys-ed">
           <span class="radio-text">P.E.</span>
       </div>
 
-      <button type="submit" class="btn btn-dark">Calculate</button>
+      <button type="submit" class="btn btn-dark">Add Info</button>
     </form>
 
-    <div id="result">
-      
-        The Random Number Generat...errr, I mean the expert career guidance counselors we've employed, have decided that you should start out learning: <span id="langToLearn"></span>
-      
 
+    <div id="alt-text">
+      <h3>IT DOESN'T MATTER WHAT YOUR NAME IS!!!</h3>
+      <img id="rawk" src="img/theRawk.jpg" alt="a well-known professional wrestler" class="">
     </div>
+
+    <div id="result">
+        The Random Number Generat...errr, I mean the "expert career guidance counselors" I've employed, have decided that you should start out learning: <span id="langToLearn">C++</span>
+    </div>
+
+    
   </div>
   
 </body>

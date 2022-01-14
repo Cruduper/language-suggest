@@ -1,4 +1,4 @@
-#question2, #question3, #question4, #question5, #result {
+#question2, #question3, #question4, #question5, #alt-text, #result {
   display:none;
 }
 
@@ -6,4 +6,13 @@
   size: 20px;
   color: #E33;
   font-weight: 500;
+}
+
+#alt-text {
+  text-align: center;
+}
+
+#rawk {
+  max-width: 70%;
+  height: auto;
 }
