@@ -1,7 +1,7 @@
 $(document).ready(function() {
   let name;
   let age;
-  let personality;
+  let favFood;
   let organized;
   let favSubject;
  
@@ -12,43 +12,39 @@ $(document).ready(function() {
     if ( document.getElementById("question1").style.display != "none" )
     { 
       $("#question1").hide();
-      name = $("input#name").val()
+      name = $("input#name").val();
       
       if (name === "Jabroni") {
         $("#alt-text").show();
         $("#alt-text").fadeOut(3000);
-        $("#alt-text").hide(5000);
       }
 
       $("#question2").show();
     } 
     else if ( document.getElementById("question2").style.display != "none" ) {
 
-        console.log("im here 2");
-        document.getElementById("question2").style.display = "none";
+        $("#question2").hide();
         age = $("input#age").val();
-        document.getElementById("question3").style.display = "block";
+        $("#question3").show()
     } 
     else if ( document.getElementById("question3").style.display != "none" ) {
 
-        console.log("im here 3");
-        document.getElementById("question3").style.display = "none";
-        personality = $("input#fav-food").val();
-        document.getElementById("question4").style.display = "block";
+        $("#question3").hide();
+        favFood = $("input#fav-food").val();
+        $("#question4").show()
     } 
     else if ( document.getElementById("question4").style.display != "none" ) {
 
-        console.log("im here 4");
-        document.getElementById("question4").style.display = "none";
+        $("#question4").hide();
         organized = $("input#organized").val();
-        document.getElementById("question5").style.display = "block";
+        $("#question5").show()
     } 
     else {
-
-        console.log("im here 5");
-        document.getElementById("userInfo").style.display = "none";
+        $("#question5").hide();
+        $("#userInfo").hide();
         favSubject = $("input#favSubject").val();
-        document.getElementById("result").style.display = "block";
+        findLanguage(name, age, favFood, organized, favSubject)
+        $("#result").show()
     }
   });
 });
