@@ -1,9 +1,63 @@
+function findLanguage( _name, _age, _favFood, _organized, _favSubject)  {
+
+  if (_name != "Jabroni") {
+    if( _age < 60 ) {
+      if(_favFood === "nachos")  {
+        if(_organized === "very-organized") {
+          return "C++";
+        }
+        else if(_organized === "organized") {
+          if(_favSubject === "physEd" || _favSubject === "art") {
+          return "CSS";
+          }
+          else if( _favSubject === "math")  {
+            return "C++"
+          }
+          else  
+            return "C"
+        }
+        else  
+          return "CSS";
+      }
+      else if (_favFood === "tacos") {
+        if( _favSubject === "art")  {
+          return "Javascript";
+        }
+        else if ( _favSubject === "pe" )  {
+          return "Java";
+        }
+        else  {
+          if( _organized === "very-organized" || _organized === "organized")  {
+            return "C++";
+          }
+          else
+            return "Javascript";
+        }
+      }
+      else
+        return "CSS"
+
+    } 
+    else
+        return "HTML";
+  } 
+  else 
+      return "HTML";
+}
+
+
+
+
+
+
+
 $(document).ready(function() {
   let name;
   let age;
   let favFood;
   let organized;
   let favSubject;
+  let yourLanguage
  
   $("form#userInfo").submit(function() {
 
@@ -43,7 +97,8 @@ $(document).ready(function() {
         $("#question5").hide();
         $("#userInfo").hide();
         favSubject = $("input#favSubject").val();
-        findLanguage(name, age, favFood, organized, favSubject)
+        yourLanguage = findLanguage(name, age, favFood, organized, favSubject)
+        $("#langToLearn").text(yourLanguage);
         $("#result").show()
     }
   });
