@@ -57,7 +57,6 @@ $(document).ready(function() {
   let favFood;
   let organized;
   let favSubject;
-  let yourLanguage
  
   $("form#userInfo").submit(function() {
 
@@ -85,7 +84,7 @@ $(document).ready(function() {
     else if ( document.getElementById("question3").style.display != "none" ) {
 
         $("#question3").hide();
-        favFood = $("input#fav-food").val();
+        favFood = $("input#favFood").val();
         $("#question4").show()
     } 
     else if ( document.getElementById("question4").style.display != "none" ) {
@@ -98,7 +97,7 @@ $(document).ready(function() {
         $("#question5").hide();
         $("#add-info").hide();
         favSubject = $("input#favSubject").val();
-        yourLanguage = findLanguage(name, age, favFood, organized, favSubject)
+        let yourLanguage = findLanguage(name, age, favFood, organized, favSubject)
         $("#langToLearn").text(yourLanguage);
         $("#result").show()
         $("#start-over").show();
@@ -107,7 +106,7 @@ $(document).ready(function() {
 
   $(document.getElementById('start-over')).click(function()  {
 
-  event.preventDefault();
+  //event.preventDefault();
   $("#result").hide();
   $("#start-over").hide();
   $("#instructions").show();
