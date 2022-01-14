@@ -5,16 +5,18 @@ $(document).ready(function() {
   let organized;
   let favSubject;
  
-  $("form#userInfo").submit(function(event) {
+  $("form#userInfo").submit(function() {
 
-    event.preventDefault;
+    event.preventDefault();
 
     if ( document.getElementById("question1").style.display != "none" )
     { 
       console.log("im here");
-      document.getElementById("question1").style.display = "none";
+      //document.getElementById("question1").style.display = "none";
+      $("#question1").hide();
       name = $("input#name").val()
-      document.getElementById("question2").style.display = "block";
+      //document.getElementById("question2").style.display = "block";
+      $("#question2").show();
     } 
     else if ( document.getElementById("question2").style.display != "none" ) {
 
@@ -40,7 +42,7 @@ $(document).ready(function() {
     else {
 
         console.log("im here 5");
-        document.getElementById("question5").style.display = "none";
+        document.getElementById("userInfo").style.display = "none";
         favSubject = $("input#favSubject").val();
         document.getElementById("result").style.display = "block";
     }
