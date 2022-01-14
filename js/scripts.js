@@ -84,19 +84,19 @@ $(document).ready(function() {
     else if ( document.getElementById("question3").style.display != "none" ) {
 
         $("#question3").hide();
-        favFood = $("input#favFood").val();
+        favFood = $("select#favFood").val();
         $("#question4").show()
     } 
     else if ( document.getElementById("question4").style.display != "none" ) {
 
         $("#question4").hide();
-        organized = $("input#organized").val();
+        organized = $("select#organized").val();
         $("#question5").show()
     } 
     else {
         $("#question5").hide();
         $("#add-info").hide();
-        favSubject = $("input#favSubject").val();
+        favSubject = $("input:radio[name=favSubject]:checked").val();
         let yourLanguage = findLanguage(name, age, favFood, organized, favSubject)
         $("#langToLearn").text(yourLanguage);
         $("#result").show()
