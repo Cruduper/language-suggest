@@ -1,6 +1,15 @@
-/* #question2, #question3, #question4, #question5, #alt-text, #result, #start-over {
+body  {
+  background-color: #fdd;
+}
+
+
+.container  {
+ max-width: 80%;
+}
+
+#question2, #question3, #question4, #question5, #alt-text, #result, #start-over {
   display:none;
-}  */
+}  
 
 #langToLearn {
   size: 20px;
@@ -15,4 +24,17 @@
 #rawk {
   max-width: 70%;
   height: auto;
+}
+
+#title  {
+  max-width: 70%;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid black;
+}
+#instructions, #result {
+font-family: Arial, Helvetica, sans-serif;
+max-width: 70%;
+margin-left: 15%;
+margin-right: 15%;
 }
