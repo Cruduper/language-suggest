@@ -15,7 +15,7 @@
       Language Suggester
     </div>
     <div id="introBox">
-      <p id="instructions">My experts that I hired using my many riches are going to help you find a programming language to start you off on a coding education path! My experts are world-class, experienced, worldly, exacting, world-builder types who have never been wrong about anything. Answer a few simple questions and then gaze into the cavernous abyss of their infinite knowledge as the perfect choice is chosen..."</p>
+      <p id="instructions">My experts that I hired using <span class="itali">my many riches</span> are going to help you find a programming language to start you off on a coding education path! My experts are world-class, experienced, worldly, exacting, world-builder types who have <span class="itali">never been wrong about anything</span>. Answer a few simple questions and then gaze into the cavernous abyss of their infinite knowledge as the perfect choice is chosen..."</p>
     </div>
     </div id="formBox">
       <form id="userInfo">
@@ -24,12 +24,12 @@
           <input id="name" class="form-control" type="text" placeholder="John Doe, Jabroni, etc">
         </div>
 
-        <div class="form-group" id="question2">
+        <div class="form-group w-25" id="question2">
           <label for="age">Type in your age:</label>
           <input id="age" class="form-control" type="number">
         </div>
 
-        <div class="form-group" id="question3">
+        <div class="form-group mb-5" id="question3">
           <label for="favFood">Nachos, tacos, or burritos?</label>
           <select id="favFood">
             <option value="nachos">all, but also NACHOS</option>
@@ -38,7 +38,7 @@
           </select>
         </div>
 
-        <div class="form-group" id="question4">
+        <div class="form-group mb-4" id="question4">
           <label for="organized">How organized are you?</label>
           <select id="organized">
             <option value="very-organized">VERY ORGANIZED. YOU ABSOLUTELY WOULD NOT BELIEVE HOW ORGANIZED I AM</option>
@@ -47,7 +47,7 @@
           </select>
         </div>
 
-        <div class="radio" id="question5">
+        <div class="radio my-5" id="question5">
           <input type="radio" name="favSubject" value="art" checked>
             <span class="radio-text">Art</span>
           <input type="radio" name="favSubject" value="math">
@@ -59,7 +59,9 @@
         </div>
 
         <button type="submit" class="btn btn-dark" id="add-info">Add Info</button>
-        <button type="reset" class="btn btn-dark my-5" id="start-over">Start Over</button>
+        <div class="text-center">
+          <button type="reset" class="btn btn-dark my-4" id="start-over">Start Over</button>
+        <div>
       </form>
     </div>
 
@@ -71,9 +73,12 @@
       <h3>More like John D'OH!</h3>
       <img id="rawk" src="img/homer.png" alt="a well-known professional wrestler" class="">
     </div>
+    <div id="alt-text3">
+      <h4>My experts agree! High scores in P.E. are the key to being a good coder!</h4>
+    </div>
 
     <div id="result">
-        The Random Number Generat...errr, I mean the "expert career guidance counselors" I've employed, have decided that you should start out learning:
+        The Random Number Generat...errr, I mean the "<span class="boldo">expert career guidance counselors</span>" I've employed using my many-splendored riches, have decided that you should start out learning:
     </div>
     <div id="langToLearn"></div>
   </div>

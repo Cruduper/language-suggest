@@ -6,15 +6,25 @@ body  {
  max-width: 80%;
 }
 
+.itali  {
+  font-style:italic;
+  font-weight: 666;
+}
+
+.boldo  {
+  font-weight: 666;
+}
+
 #introBox {
   height: 8em;
+  margin-bottom: 6%;
 }
 
 #formBox  {
   height: 5em;
 }
 
-#question2, #question3, #question4, #question5, #alt-text1, #alt-text2, #result, #start-over {
+#question2, #question3, #question4, #question5, #alt-text1, #alt-text2, #alt-text3, #result, #start-over {
   display:none;
 }  
 
@@ -40,11 +50,13 @@ body  {
 }
 
 #title  {
-  background-color: salmon;
+  background-color: #e99;
+  text-shadow: .07em .07em .03em #f66;
   font-size: 50px;
   max-width: 70%;
   text-align: center;
   border: 2px solid black;
+  color:#fdd;
 }
 #instructions, #result {
 font-family: Arial, Helvetica, sans-serif;
