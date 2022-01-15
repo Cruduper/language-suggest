@@ -46,11 +46,6 @@ function findLanguage( _name, _age, _favFood, _organized, _favSubject)  {
 }
 
 
-
-
-
-
-
 $(document).ready(function() {
   let name;
   let age;
@@ -106,8 +101,8 @@ $(document).ready(function() {
 
   $(document.getElementById('start-over')).click(function()  {
 
-  //event.preventDefault();
   $("#result").hide();
+  $("#langToLearn").text("");
   $("#start-over").hide();
   $("#instructions").show();
   $("#question1").show();
