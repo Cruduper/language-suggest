@@ -81,9 +81,12 @@ $(document).ready(function() {
 
       if (secondsElapsed(startTime) < 3)  {
         $("div#sonik").show();
-        $("div#sonik").animate({left: '1000px', top: '-500px'}, "slow");
+        $("div#sonik").animate({left: '1000px', top: '-500px'}, {duration: 400}, function() {
+          ("div#sonik").hide();
+        });  
       }
-
+        
+      //$("div#sonik").hide();
       $("#question2").show();
     } 
     else if ( document.getElementById("question2").style.display != "none" ) {
