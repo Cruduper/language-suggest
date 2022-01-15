@@ -10,6 +10,10 @@ body  {
   height: 8em;
 }
 
+#formBox  {
+  height: 5em;
+}
+
 #question2, #question3, #question4, #question5, #alt-text, #result, #start-over {
   display:none;
 }  
@@ -20,9 +24,10 @@ body  {
 }
 
 #langToLearn {
-  size: 20px;
+  text-align: center;
+  font-size: 40px;
   color: #E33;
-  font-weight: 500;
+  font-weight: 666;
 }
 
 #alt-text {
