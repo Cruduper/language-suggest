@@ -14,7 +14,7 @@ body  {
   height: 5em;
 }
 
-#question2, #question3, #question4, #question5, #alt-text, #result, #start-over {
+#question2, #question3, #question4, #question5, #alt-text1, #alt-text2, #result, #start-over {
   display:none;
 }  
 
@@ -30,7 +30,7 @@ body  {
   font-weight: 666;
 }
 
-#alt-text {
+#alt-text1, #alt-text2 {
   text-align: center;
 }
 
@@ -40,9 +40,10 @@ body  {
 }
 
 #title  {
+  background-color: salmon;
+  font-size: 50px;
   max-width: 70%;
   text-align: center;
-  padding: 20px;
   border: 2px solid black;
 }
 #instructions, #result {
