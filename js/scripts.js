@@ -38,43 +38,68 @@ function findLanguage( _name, _age, _favFood, _organized, _favSubject)  {
       return "HTML";
 }
 
+function secondsElapsed (_startTime) {
+  var date_now = new Date ();
+  var time_now = date_now.getTime ();
+  var time_diff = time_now - _startTime;
+  var seconds_elapsed = Math.floor ( time_diff / 1000 );
+
+  return ( seconds_elapsed ); 
+}
+
+
+
 $(document).ready(function() {
   let name;
   let age;
   let favFood;
   let organized;
   let favSubject;
+
+  const startDate = new Date();
+  const startTime = startDate.getTime();
+  console.log("pause");
  
   $("form#userInfo").submit(function() {
     event.preventDefault();
-    
+
     if ( document.getElementById("question1").style.display != "none" ) { 
+
+
+
       $("#question1").hide();
       name = $("input#name").val();
       
       if (name === "Jabroni") {
         $("#alt-text1").show();
-        $("#alt-text1").fadeOut(3000); }
+        $("#alt-text1").fadeOut(3000); 
+      }
       else if (name === "John Doe") {
         $("#alt-text2").show();
-        $("#alt-text2").fadeOut(3000);  }
+        $("#alt-text2").fadeOut(3000);  
+      }
+
+      if (secondsElapsed(startTime) < 3)  {
+        $("div#sonik").show();
+        $("div#sonik").animate({left: '1000px', top: '-500px'}, "slow");
+      }
 
       $("#question2").show();
     } 
     else if ( document.getElementById("question2").style.display != "none" ) {
         $("#question2").hide();
         age = $("input#age").val();
-        $("#question3").show()  
+        $("#question3").show();  
     } 
     else if ( document.getElementById("question3").style.display != "none" ) {
         $("#question3").hide();
         favFood = $("select#favFood").val();
-        $("#question4").show()  
+        $("#question4").show();  
     } 
     else if ( document.getElementById("question4").style.display != "none" ) {
         $("#question4").hide();
         organized = $("select#organized").val();
-        $("#question5").show()  
+        $("#question5").show();  
     } 
     else {
         $("#instructions").hide();
@@ -87,7 +112,7 @@ $(document).ready(function() {
         }        
         let yourLanguage = findLanguage(name, age, favFood, organized, favSubject)
         $("#langToLearn").text(yourLanguage);
-        $("#result").show()
+        $("#result").show();
         $("#start-over").show(); 
     }
   });
