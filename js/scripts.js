@@ -65,7 +65,6 @@ $(document).ready(function() {
     if ( document.getElementById("question1").style.display != "none" )
     { 
       $("#question1").hide();
-      $("#instructions").hide();
       name = $("input#name").val();
       
       if (name === "Jabroni") {
@@ -94,6 +93,7 @@ $(document).ready(function() {
         $("#question5").show()
     } 
     else {
+        $("#instructions").hide();
         $("#question5").hide();
         $("#add-info").hide();
         favSubject = $("input:radio[name=favSubject]:checked").val();

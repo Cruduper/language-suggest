@@ -2,14 +2,22 @@ body  {
   background-color: #fdd;
 }
 
-
 .container  {
  max-width: 80%;
+}
+
+#introBox {
+  height: 8em;
 }
 
 #question2, #question3, #question4, #question5, #alt-text, #result, #start-over {
   display:none;
 }  
+
+#userInfo {
+  max-width: 50%;
+  margin: auto;
+}
 
 #langToLearn {
   size: 20px;
@@ -34,7 +42,7 @@ body  {
 }
 #instructions, #result {
 font-family: Arial, Helvetica, sans-serif;
-max-width: 70%;
+max-width: 80%;
 margin-left: 15%;
 margin-right: 15%;
 }
