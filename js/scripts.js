@@ -1,3 +1,5 @@
+
+    //Business Logic code
 function findLanguage( _name, _age, _favFood, _organized, _favSubject)  {
   if (_name != "Jabroni") {
     if( _age < 60 ) {
@@ -48,7 +50,7 @@ function secondsElapsed (_startTime) {
 }
 
 
-
+    //User Interface code
 $(document).ready(function() {
   let name;
   let age;
@@ -65,8 +67,6 @@ $(document).ready(function() {
 
     if ( document.getElementById("question1").style.display != "none" ) { 
 
-
-
       $("#question1").hide();
       name = $("input#name").val();
       
@@ -79,14 +79,16 @@ $(document).ready(function() {
         $("#alt-text2").fadeOut(3000);  
       }
 
-      if (secondsElapsed(startTime) < 3)  {
-        $("div#sonik").show();
-        $("div#sonik").animate({left: '1000px', top: '-500px'}, {duration: 400}, function() {
-          ("div#sonik").hide();
-        });  
-      }
+      if (secondsElapsed(startTime) < 30)  {
         
-      //$("div#sonik").hide();
+        $("#sonik").addClass("inline");
+        $("#sonik").fadeIn({queue: false, duration: 400});
+        $("#sonik").animate({left: '1000px', top: '0px'}, 900);
+        setTimeout(() => {  $("#sonik").fadeOut({queue: false, duration: 200}); }, 600);
+      
+
+      }
+
       $("#question2").show();
     } 
     else if ( document.getElementById("question2").style.display != "none" ) {

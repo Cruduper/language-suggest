@@ -44,6 +44,7 @@ body  {
 
 #alt-text1, #alt-text2 {
   text-align: center;
+  /*position: absolute;*/
 }
 
 #rawk {
@@ -68,11 +69,11 @@ body  {
 }
 
 #sonik  {
-  position: relative;
+  position: absolute;
   left: -150%;
-  top: -30;
+  top: 100%;
   display: none;
-  z-index: -1;
+  z-index: -3;
 }
 
 #alt-text1, #alt-text2, #alt-text3 {

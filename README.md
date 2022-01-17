@@ -2,7 +2,7 @@
 
 #### By _**Eric Crudup**_
 
-#### _The user enters information about themselves and the program tells them what programming language they should start with as a beginner_ [GH-Pages Version](https://opensource.org/licenses/MIT)
+#### _The user enters information about themselves and the program tells them what programming language they should start with as a beginner_ [GH-Pages Version](https://cruduper.github.io/language-suggest/)
 
 
 ## Technologies Used
