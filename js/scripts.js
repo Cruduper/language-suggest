@@ -31,7 +31,6 @@ function findLanguage( _name, _age, _favFood, _organized, _favSubject)  {
       }
       else
         return "CSS"
-
     } 
     else
         return "HTML";
@@ -79,14 +78,11 @@ $(document).ready(function() {
         $("#alt-text2").fadeOut(3000);  
       }
 
-      if (secondsElapsed(startTime) < 30)  {
-        
+      if (secondsElapsed(startTime) < 3)  {
         $("#sonik").addClass("inline");
         $("#sonik").fadeIn({queue: false, duration: 400});
         $("#sonik").animate({left: '1000px', top: '0px'}, 900);
         setTimeout(() => {  $("#sonik").fadeOut({queue: false, duration: 200}); }, 600);
-      
-
       }
 
       $("#question2").show();
