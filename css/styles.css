@@ -22,8 +22,9 @@ body  {
 }
 
 #formBox  {
-  position: absolute;
+  /* position: absolute; */
   height: 5em;
+  margin-bottom: 30px;
 }
 
 #question2, #question3, #question4, #question5, #alt-text1, #alt-text2, #alt-text3, #result, #start-over {
@@ -76,6 +77,6 @@ body  {
 }
 
 #alt-text1, #alt-text2, #alt-text3 {
-  position: absolute;
+  margin-top: 5em; 
   z-index: 3;
 }

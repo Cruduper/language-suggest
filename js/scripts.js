@@ -1,51 +1,63 @@
 
     //Business Logic code
-function findLanguage( _name, _age, _favFood, _organized, _favSubject)  {
-  if (_name != "Jabroni") {
-    if( _age < 60 ) {
-      if(_favFood === "nachos")  {
-        if(_organized === "very-organized")
+function findLanguage( nameUser, ageUser, foodUser, organizedUser, subjectUser)  {
+  if (nameUser != "Jabroni") {
+    if( ageUser < 60 ) {
+      if(foodUser === "nachos")  {
+        if(organizedUser === "very-organized") {
           return "C++";
-        else if(_organized === "organized") {
-          if(_favSubject === "physEd" || _favSubject === "art") 
+        }
+        else if(organizedUser === "organized") {
+          if(subjectUser === "physEd" || subjectUser === "art") {
             return "CSS";
-          else if( _favSubject === "math")  
-            return "C++"
-          else  
-            return "C"
-        }
-        else  
-          return "CSS";
-      }
-      else if (_favFood === "tacos") {
-        if( _favSubject === "art")  
-          return "Javascript";
-        else if ( _favSubject === "physEd" )
-          return "Java";
-        else  {
-          if( _organized === "very-organized" || _organized === "organized")
+          }
+          else if( subjectUser === "math")  {
             return "C++";
-          else
-            return "Javascript";  
+          }
+          else  {
+            return "C";
+          }
+        }
+        else  {
+          return "CSS";
         }
       }
-      else
+      else if (foodUser === "tacos") {
+        if( subjectUser === "art")  {
+          return "Javascript";
+        }
+        else if ( subjectUser === "physEd" )  {
+          return "Java";
+        }
+        else  {
+          if( organizedUser === "very-organized" || organizedUser === "organized")  {
+            return "C++";
+          }
+          else  {
+            return "Javascript";  
+          }
+        }
+      }
+      else  {
         return "CSS"
+      }
     } 
-    else
-        return "HTML";
-  } 
-  else 
+    else  {
       return "HTML";
+    }
+  } 
+  else {
+    return "HTML";
+  }
 }
 
-function secondsElapsed (_startTime) {
-  var date_now = new Date ();
-  var time_now = date_now.getTime ();
-  var time_diff = time_now - _startTime;
-  var seconds_elapsed = Math.floor ( time_diff / 1000 );
+function secondsElapsed (startingTime) {
+  var dateNow = new Date ();
+  var timeNow = dateNow.getTime ();
+  var timeDiff = timeNow - startingTime;
+  var secondsElapsed = Math.floor ( timeDiff / 1000 );
 
-  return ( seconds_elapsed ); 
+  return ( secondsElapsed ); 
 }
 
 
@@ -76,6 +88,9 @@ $(document).ready(function() {
       else if (name === "John Doe") {
         $("#alt-text2").show();
         $("#alt-text2").fadeOut(3000);  
+      }
+      else{
+        // This else intentionally left blank
       }
 
       if (secondsElapsed(startTime) < 3)  {
@@ -126,5 +141,4 @@ $(document).ready(function() {
     $("#question1").show();
     $("#add-info").show();
   }); 
-
 });
