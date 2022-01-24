@@ -15,10 +15,10 @@
 
 ## Setup/Installation Requirements
 
-* _download repo using git_
-* _navigate to repo in computer's file system
-* _open repo folder
-* _open index.html_
+* _clone repo using git_
+* _navigate to repo in computer's file system_
+* _open repo folder_
+* _open index.html in a browser_
 
 ## Known Bugs and issues
 
